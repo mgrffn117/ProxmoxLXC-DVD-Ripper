@@ -23,7 +23,13 @@ This guide is broken down into several parts. Follow them in order.
     * How to identify the main movie.
     * The `makemkvcon` command to rip the movie.
 
-## Troubleshooting
+ 4. **[FFmpeg Merging Guide](./4-FFMPEG-GUIDE.md)**
+    * How to install FFmpeg on the LXC container (Linux) or Windows host.
+    * Generating the `list.txt` concatenation file automatically.
+    * The `ffmpeg` command to losslessly merge split video files.
+    * Using the MKV container to preserve DVD subtitles and chapter markers.
+
+    ## Troubleshooting
 
 * If you hit an error, please see the **[Troubleshooting Guide](./TROUBLESHOOTING.md)** for a list of common errors and their solutions.
 
