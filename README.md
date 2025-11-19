@@ -28,7 +28,12 @@ This guide is broken down into several parts. Follow them in order.
     * Generating the `list.txt` concatenation file automatically.
     * The `ffmpeg` command to losslessly merge split video files.
     * Using the MKV container to preserve DVD subtitles and chapter markers.
-
+      
+5.  **[Automation (Headless Mode)](./4-AUTOMATION.md)**
+    * Set up a script to detect discs automatically using size-based fingerprints.
+    * Configure Systemd to poll the drive every minute.
+    * **Features:** Auto-detects the main movie, prevents re-ripping the same disc, and handles robust tray unlocking/ejecting via SCSI commands.
+      
     ## Troubleshooting
 
 * If you hit an error, please see the **[Troubleshooting Guide](./TROUBLESHOOTING.md)** for a list of common errors and their solutions.
