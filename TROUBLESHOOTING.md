@@ -38,3 +38,12 @@ Here are common errors and their solutions.
 ### Error: I ripped the disc but it's just a trailer.
 * **Cause:** You ripped the wrong Title ID (e.g., `0`).
 * **Solution:** Follow the [Ripping Guide](./3-RIPPING-GUIDE.md) to scan the disc with the `info` command and find the title with the longest duration/largest size.
+
+ ---
+
+### Error: Service starts but does nothing (Stale Lock File)
+* **Symptoms:** The service runs but exits immediately. Logs show no new activity. Running the script manually with `bash -x` shows it hitting the lock file check and exiting with `exit 0`.
+* **Cause:** The server was rebooted unexpectedly, or the container was restarted while a job was active (or while the tray was open/ejecting). This killed the script before it could delete the `/tmp/autorip.lock` file.
+* **Solution:** Manually remove the stale lock file to reset the process:
+  ```bash
+  rm /tmp/autorip.lock
